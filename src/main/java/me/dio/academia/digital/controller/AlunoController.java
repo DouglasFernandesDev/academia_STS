@@ -1,0 +1,59 @@
+<<<<<<< HEAD
+package src.main.java.me.dio.academia.digital.controller;
+=======
+package me.dio.academia.digital.controller;
+>>>>>>> 7595f9b (projeto funcionando e reparado)
+
+import me.dio.academia.digital.entity.Aluno;
+import me.dio.academia.digital.entity.AvaliacaoFisica;
+import me.dio.academia.digital.entity.form.AlunoForm;
+import me.dio.academia.digital.service.impl.AlunoServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.util.List;
+
+@RestController
+@RequestMapping("/alunos")
+public class AlunoController {
+
+  @Autowired
+  private AlunoServiceImpl service;
+<<<<<<< HEAD
+
+=======
+  
+>>>>>>> 7595f9b (projeto funcionando e reparado)
+  @PostMapping
+  public Aluno create(@Valid @RequestBody AlunoForm form) {
+    return service.create(form);
+  }
+
+  @GetMapping("/avaliacoes/{id}")
+<<<<<<< HEAD
+  public List<AvaliacaoFisica> getAllAvaliacaoFisicaId(@PathVariable Long id) {
+    return service.getAllAvaliacaoFisicaId(id);
+  }
+
+  @GetMapping
+  public List<Aluno> getAll(@RequestParam(value = "dataDeNascimento", required = false)
+                                  String dataDeNacimento){
+    return service.getAll(dataDeNacimento);
+  }
+
+
+}
+=======
+  public List<AvaliacaoFisica> getAllAvaliacoesFisicaId(@PathVariable Long id){
+	  return service.getAllAvaliacaoFisicaId(id);
+  }
+  
+  @GetMapping
+  public List<Aluno> getAll(@RequestParam(value = "dataDeNascimento", required = false)
+  String dataDeNacimento){
+  return service.getAll(dataDeNacimento);
+}
+
+}
+>>>>>>> 7595f9b (projeto funcionando e reparado)
